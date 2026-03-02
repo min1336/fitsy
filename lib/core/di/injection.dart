@@ -24,7 +24,7 @@ void configureDependencies() {
   // Firebase
   sl.registerLazySingleton(() => FirebaseFirestore.instance);
   sl.registerLazySingleton(() => FirebaseStorage.instance);
-  sl.registerLazySingleton(() => FirebaseFunctions.instance);
+  sl.registerLazySingleton(() => FirebaseFunctions.instanceFor(region: 'asia-northeast3'));
 
   // Closet
   sl.registerLazySingleton<ClosetRemoteDataSource>(

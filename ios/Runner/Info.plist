@@ -59,6 +59,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>옷장에 추가할 옷 사진을 촬영합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>옷장에 추가할 옷 사진을 선택합니다.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

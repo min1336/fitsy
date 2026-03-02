@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fitsy/features/outfit/domain/entities/outfit.dart';
+import 'package:fitsy/features/outfit/presentation/bloc/outfit_bloc.dart';
+import 'package:fitsy/features/outfit/presentation/bloc/outfit_event.dart';
 
 class OutfitCard extends StatelessWidget {
   final Outfit outfit;
@@ -51,7 +54,12 @@ class OutfitCard extends StatelessWidget {
                 if (outfit.generatedImageUrl == null)
                   FilledButton.icon(
                     onPressed: () {
-                      // TODO: GenerateImage event
+                      context.read<OutfitBloc>().add(
+                        GenerateImage(
+                          userId: 'temp-user',
+                          outfitId: outfit.id,
+                        ),
+                      );
                     },
                     icon: const Icon(Icons.image, size: 18),
                     label: const Text('이미지 생성'),
@@ -63,7 +71,7 @@ class OutfitCard extends StatelessWidget {
                     color: outfit.liked == true ? Colors.red : null,
                   ),
                   onPressed: () {
-                    // TODO: like/dislike
+                    // TODO: like/dislike 기능은 백엔드 API 추가 후 구현
                   },
                 ),
               ],
