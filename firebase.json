@@ -1,17 +1,1 @@
-{
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "functions": [
-    {
-      "source": "functions",
-      "codebase": "default",
-      "ignore": ["node_modules", ".git"],
-      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run build"]
-    }
-  ],
-  "storage": {
-    "rules": "storage.rules"
-  }
-}
+{"firestore":{"rules":"firestore.rules","indexes":"firestore.indexes.json"},"functions":[{"source":"functions","codebase":"default","ignore":["node_modules",".git"],"predeploy":["npm --prefix \"$RESOURCE_DIR\" run build"]}],"storage":{"rules":"storage.rules"},"flutter":{"platforms":{"android":{"default":{"projectId":"fitsy-af0239","appId":"1:360174944987:android:6df5a9b8b17542ce6502fe","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"fitsy-af0239","appId":"1:360174944987:ios:1bb9f7b42ec698bc6502fe","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"fitsy-af0239","configurations":{"web":"1:360174944987:web:c04e05f7367aab536502fe"}}}}}}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "360174944987",
+    "project_id": "fitsy-af0239",
+    "storage_bucket": "fitsy-af0239.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360174944987:android:6df5a9b8b17542ce6502fe",
+        "android_client_info": {
+          "package_name": "com.fitsy.fitsy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdj2sd40fNluYnPXHbKfp6CInjn0b4aeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
