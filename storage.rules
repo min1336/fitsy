@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // 사용자별 옷 이미지
+    match /users/{userId}/clothes/{clothId}/{allPaths=**} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null && request.auth.uid == userId
+                   && request.resource.size < 10 * 1024 * 1024  // 10MB 제한
+                   && request.resource.contentType.matches('image/.*');
+    }
+
+    // 코디 생성 이미지 (Cloud Functions에서 쓰기)
+    match /users/{userId}/outfits/{outfitId}/{allPaths=**} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if false; // Cloud Functions만 쓰기 가능 (admin SDK 사용)
+    }
+  }
+}
